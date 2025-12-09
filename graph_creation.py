@@ -5,7 +5,7 @@ def create_graph(n_vertices, density, weight_range=(1, 10)):
     max_possible_edges = n_vertices * (n_vertices - 1) // 2
     required_edges = int(density / 100 * max_possible_edges)
 
-    matrix = [[float('inf') for _ in range(n_vertices)] for _ in range(n_vertices)]
+    matrix = [[float('inf') for n in range(n_vertices)] for n in range(n_vertices)]
 
     for i in range(n_vertices):
         matrix[i][i] = 0
